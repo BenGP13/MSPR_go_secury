@@ -2,3 +2,8 @@ djohn
 cberthier
 sconnor
 sholmes
+jmacclane 
+afoley 
+mriggs 
+jwest 
+jrouletabille
