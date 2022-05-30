@@ -3,6 +3,7 @@ Foley
 Surveillance entrepôt 
 pmNd1ldFE7WTk 
 
+kit
 brassard
 talky
 taser
