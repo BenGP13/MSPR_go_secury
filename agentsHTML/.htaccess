@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Connectez vous"
+AuthUserFile C:\Users\asenechal\Desktop\MSPR_Dev\MSPR_Dev1Appli\.htpasswd
+require valid-user
