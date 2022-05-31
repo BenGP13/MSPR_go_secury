@@ -28,6 +28,9 @@ public class Facade {
         for (Agent agent : listAgents){
             MyThread thread = new MyThread(agent, listAgents, listMateriels);
             listThreads.add(thread);
+//            Facade facade = new Facade(listAgents, listMateriels);
+//            facade.creationFichier(agent.getNom() + agent.getPrenom() + ".html", System.getProperty("user.dir") + "\\com\\company\\agentsHTML\\");
+//            facade.genererLesPagesAgents(agent.getNom() + agent.getPrenom() + ".html", System.getProperty("user.dir") + "\\com\\company\\agentsHTML\\", agent);
         }
 
         for (MyThread thread : listThreads){
@@ -121,7 +124,9 @@ public class Facade {
         lectureFichierListe();
         try (DirectoryStream<Path> stream = Files.newDirectoryStream(Paths.get(System.getProperty("user.dir") + "/agents"))) {
             for (Path file: stream) {
-                listAgents.add(lectureFichierAgent(file.getFileName().toString()));
+                if(".txt".equals(file.toString().substring(file.toString().length() - 4))){
+                    listAgents.add(lectureFichierAgent(file.getFileName().toString()));
+                }
             }
         } catch (IOException | DirectoryIteratorException ex) {
             System.err.println(ex);
@@ -147,7 +152,7 @@ public class Facade {
 
     void genererLaPageDAccueil(){
         try{
-            PrintWriter writer = new PrintWriter(System.getProperty("user.dir") + "/agentsHTML/index.html", "UTF-8");
+            PrintWriter writer = new PrintWriter(System.getProperty("user.dir") + "\\com\\company\\agentsHTML\\index.html", "UTF-8");
             writer.println("<!DOCTYPE html>");
             writer.println("<html lang=\"fr\">");
             writer.println("<head>");
