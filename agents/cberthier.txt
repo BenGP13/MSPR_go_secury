@@ -7,4 +7,5 @@ torche
 oreillette
 bombe
 bombe
-bo
+bombe
+b
