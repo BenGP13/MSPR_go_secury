@@ -3,5 +3,6 @@ Corinne
 Surveillance entrepôt 
 test
 
-torch
-torch
+torche
+oreillette
+bomb
