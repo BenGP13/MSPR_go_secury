@@ -10,4 +10,5 @@ bombe
 bombe
 bombe
 bombe
-bom
+bombe
+bo
