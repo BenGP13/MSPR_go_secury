@@ -1,15 +1,4 @@
 Berthier 
 Corinne 
 Surveillance entrepôt 
-test
-
-torche
-oreillette
-bombe
-bombe
-bombe
-bombe
-bombe
-bombe
-bombe
-b
+test2
