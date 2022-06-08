@@ -5,4 +5,5 @@ test
 
 torche
 oreillette
-bomb
+bombe
+bom
