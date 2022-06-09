@@ -5,5 +5,4 @@ test2
 
 kit
 lampe
-lacrymo
-brassar
+lacrym
