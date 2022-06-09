@@ -3,6 +3,6 @@ Corinne
 Surveillance entrepôt 
 test2
 
-torche
-oreillette
-bato
+kit
+lampe
+lacrymo
