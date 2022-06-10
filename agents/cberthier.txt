@@ -4,5 +4,3 @@ Surveillance entrepôt
 test2
 
 menottes
-brassard
-gants
