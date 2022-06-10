@@ -4,3 +4,6 @@ Surveillance entrepôt
 test2
 
 menottes
+mousqueton
+gants
+brassard
