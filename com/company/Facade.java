@@ -24,6 +24,7 @@ public class Facade {
         lectureFichierListe();
         lectureDossierAgents();
         genererLaPageDAccueil();
+        genererLHtaccess();
 
         List<MyThread> listThreads = new ArrayList<>();
         for (Agent agent : listAgents){
@@ -253,6 +254,25 @@ public class Facade {
             System.out.println("An error occurred.");
             e.printStackTrace();
         } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+    }
+
+    void genererLHtaccess(){
+        try{
+            PrintWriter writer = new PrintWriter(System.getProperty("user.dir") + "\\com\\company\\agentsHTML\\" + ".htaccess", "UTF-8");
+            for (Agent agent : listAgents){
+                writer.println("<Files " + agent.getNom() + agent.getPrenom() + ".html>\n" +
+                        "AuthType Digest\n" +
+                        "AuthName \"Private\"\n" +
+                        "AuthUserFile /var/www/groupe4CDA.com/public_html/.htpasswd" + agent.getNom() + agent.getPrenom() + "\n" +
+                        "Require valid-user\n" +
+                        "</Files>\n");
+            }
+            writer.close();
+        }
+        catch (IOException e){
+            System.out.println("An error occurred.");
             e.printStackTrace();
         }
     }
