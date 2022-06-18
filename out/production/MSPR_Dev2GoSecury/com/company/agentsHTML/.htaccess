@@ -1,6 +1,0 @@
-<Files AnnidFoley.html>
-AuthType Digest
-AuthName "Private"
-AuthUserFile /var/www/groupe4CDA.com/public_html/.htpasswdafoley
-Require valid-user
-</Files>
