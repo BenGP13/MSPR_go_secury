@@ -1,0 +1,70 @@
+<Files AnnidFoley.html>
+AuthType Digest
+AuthName "Private"
+AuthUserFile /var/www/groupe4CDA.com/public_html/.htpasswdAnnidFoley
+Require valid-user
+</Files>
+
+<Files AymericSENECHAL.html>
+AuthType Digest
+AuthName "Private"
+AuthUserFile /var/www/groupe4CDA.com/public_html/.htpasswdAymericSENECHAL
+Require valid-user
+</Files>
+
+<Files BerthierCorinne.html>
+AuthType Digest
+AuthName "Private"
+AuthUserFile /var/www/groupe4CDA.com/public_html/.htpasswdBerthierCorinne
+Require valid-user
+</Files>
+
+<Files DoeJohn.html>
+AuthType Digest
+AuthName "Private"
+AuthUserFile /var/www/groupe4CDA.com/public_html/.htpasswdDoeJohn
+Require valid-user
+</Files>
+
+<Files JadorMacclane.html>
+AuthType Digest
+AuthName "Private"
+AuthUserFile /var/www/groupe4CDA.com/public_html/.htpasswdJadorMacclane
+Require valid-user
+</Files>
+
+<Files JannyRouletabille.html>
+AuthType Digest
+AuthName "Private"
+AuthUserFile /var/www/groupe4CDA.com/public_html/.htpasswdJannyRouletabille
+Require valid-user
+</Files>
+
+<Files JaddyWest.html>
+AuthType Digest
+AuthName "Private"
+AuthUserFile /var/www/groupe4CDA.com/public_html/.htpasswdJaddyWest
+Require valid-user
+</Files>
+
+<Files MacRiggs.html>
+AuthType Digest
+AuthName "Private"
+AuthUserFile /var/www/groupe4CDA.com/public_html/.htpasswdMacRiggs
+Require valid-user
+</Files>
+
+<Files ConnorSarah.html>
+AuthType Digest
+AuthName "Private"
+AuthUserFile /var/www/groupe4CDA.com/public_html/.htpasswdConnorSarah
+Require valid-user
+</Files>
+
+<Files SherlockHolmes.html>
+AuthType Digest
+AuthName "Private"
+AuthUserFile /var/www/groupe4CDA.com/public_html/.htpasswdSherlockHolmes
+Require valid-user
+</Files>
+
