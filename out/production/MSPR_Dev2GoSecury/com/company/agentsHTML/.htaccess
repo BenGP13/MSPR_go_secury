@@ -1,4 +1,6 @@
-AuthType Basic
-AuthName "Connectez vous"
-AuthUserFile C:\Users\asenechal\Desktop\MSPR_Dev\MSPR_Dev1Appli\.htpasswd
-require valid-user
+<Files AnnidFoley.html>
+AuthType Digest
+AuthName "Private"
+AuthUserFile /var/www/groupe4CDA.com/public_html/.htpasswdafoley
+Require valid-user
+</Files>

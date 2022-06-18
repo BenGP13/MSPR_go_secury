@@ -1,12 +1,6 @@
 
-9
-	staff.txt,9\5\958f83918ca4afe4006597bc730b08198810b5e3
-A
-agents/afoley.txt,2\0\204023f28a4604b2bbc4be4f35d1da1b80564ee4
 V
 &com/company/agentsHTML/AnnidFoley.html,9\3\93775690d64f143b8dea5ed95eb572be111c92d0
-[
-+com/company/agentsHTML/BerthierCorinne.html,c\4\c46932b20e96fe6b7313fd844b8d23bdf2d6d20f
 S
 #com/company/agentsHTML/DoeJohn.html,e\1\e13bfbbfa9d72fc4342baac520f240a66e33420e
 U

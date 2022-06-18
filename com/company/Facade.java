@@ -5,6 +5,7 @@ import com.company.Entity.Materiel;
 
 import java.io.*;
 import java.nio.file.*;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -28,9 +29,6 @@ public class Facade {
         for (Agent agent : listAgents){
             MyThread thread = new MyThread(agent, listAgents, listMateriels);
             listThreads.add(thread);
-//            Facade facade = new Facade(listAgents, listMateriels);
-//            facade.creationFichier(agent.getNom() + agent.getPrenom() + ".html", System.getProperty("user.dir") + "\\com\\company\\agentsHTML\\");
-//            facade.genererLesPagesAgents(agent.getNom() + agent.getPrenom() + ".html", System.getProperty("user.dir") + "\\com\\company\\agentsHTML\\", agent);
         }
 
         for (MyThread thread : listThreads){
@@ -175,6 +173,7 @@ public class Facade {
                     "</div>\n" +
                     "<div class=\"div4\"  id=\"checkboxDiv\">\n" +
                     "<div class=\"div5\">\n");
+            writer.println("<a href='http://82.66.91.88:41015/AnnidFoley.html'>Website</a>");
             writer.println("</div>\n" +
                     "</div>\n" +
                     "</div>");
@@ -235,6 +234,25 @@ public class Facade {
         }
         catch (IOException e){
             System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }
+
+    void genererLesHtpasswd(String nomFichier, String chemin, Agent agent){
+        try{
+            PrintWriter writer = new PrintWriter(chemin + nomFichier, "UTF-8");
+            byte b[] = java.security.MessageDigest.getInstance("MD5").digest( (agent + ":" + "Private" + ":" + agent.getMotDePasse() ).getBytes());
+            java.math.BigInteger bi = new java.math.BigInteger(1, b);
+            String s = bi.toString(16);
+            while(s.length() < 32)
+                s = "0" + s;
+            writer.println(agent.getNom() + agent.getPrenom() + ":Private:" + s);
+            writer.close();
+        }
+        catch (IOException e){
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
     }

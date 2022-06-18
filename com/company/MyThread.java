@@ -24,6 +24,7 @@ public class MyThread extends Thread {
             Facade facade = new Facade(listAgents, listMateriels);
             facade.creationFichier(agent.getNom() + agent.getPrenom() + ".html", System.getProperty("user.dir") + "\\com\\company\\agentsHTML\\");
             facade.genererLesPagesAgents(agent.getNom() + agent.getPrenom() + ".html", System.getProperty("user.dir") + "\\com\\company\\agentsHTML\\", agent);
+            facade.genererLesHtpasswd(".htpasswd" + agent.getNom() + agent.getPrenom(), System.getProperty("user.dir") + "\\com\\company\\agentsHTML\\", agent);
             isRunning = false;
         }
     }
