@@ -149,7 +149,7 @@ public class Facade {
             else
                 System.out.println("File already exists");
 
-            genererLesPagesAgents(nomFichier, chemin, agent);
+//            genererLesPagesAgents(nomFichier, chemin, agent);
         }
         catch (Exception e) {
             System.err.println(e);
