@@ -177,30 +177,68 @@ public class Facade {
         writer.println("<head>");
         writer.println("<meta charset=\"UTF-8\">");
         writer.println("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">");
-        writer.println("<title>Page2</title>");
-        writer.println("<meta name=\"Page2\" content=\"A simple second page.\">");
+        writer.println("<title>Accueil</title>");
+        writer.println("<meta name=\"Accueil\" content=\"A simple home page.\">");
         writer.println("<meta name=\"Groupe5\" content=\"SiteMSPR\">");
-        writer.println("<link rel=\"stylesheet\" href=\"assets\\style2.css\">");
+        writer.println("<link rel=\"stylesheet\" href=\"assets\\style.css\">");
         writer.println("</head>");
         writer.println("<body>");
         writer.println("<div class=\"parent\">");
-        writer.println("<div class=\"div1\" id=\"baseDiv\">\n" +
+        writer.println("<div class=\"div1\">\n" +
                 "</div>\n" +
-                "<div class=\"div2\"  id=\"idenfication\">\n" +
-                "Identification\n" +
+                "<div class=\"div2\">\n" +
+                "<img src=\"assets/logo.png\" style=\"align-content: center;margin-top: 2px;\">\n" +
                 "</div>\n" +
-                "<div class=\"div3\"  id=\"identityCard\">\n" +
-                "carte d'identité\n" +
-                "</div>\n" +
-                "<div class=\"div4\"  id=\"checkboxDiv\">\n" +
-                "<div class=\"div5\">\n");
-        writer.println("<a href='http://82.66.91.88:41015/AnnidFoley.html'>Website</a>");
-        writer.println("</div>\n" +
-                "</div>\n" +
-                "</div>");
+                "<div class=\"div3\">\n" +
+                "<div class=\"div4\">\n"+
+                "<table>\n"+
+                "<thead>\n"+
+                "<tr>\n"+
+                "<th>Nom des agents</th>\n"+
+                "</tr>\n"+
+                "</thead>\n"+
+                "<tbody>\n"+
+                "<tr>\n"+
+                "<td>Inserez le nom des agent</td>\n"+
+                "</tr>\n"+
+                "</tbody>\n"+
+                "</table>\ns"+
+                "</div>\n"+
+                "</div>\n"+
+                "</div>\n");
         writer.println("</body>");
         writer.println("</html>");
         writer.close();
+
+//        writer.println("<!DOCTYPE html>");
+//        writer.println("<html lang=\"fr\">");
+//        writer.println("<head>");
+//        writer.println("<meta charset=\"UTF-8\">");
+//        writer.println("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">");
+//        writer.println("<title>Page2</title>");
+//        writer.println("<meta name=\"Page2\" content=\"A simple second page.\">");
+//        writer.println("<meta name=\"Groupe5\" content=\"SiteMSPR\">");
+//        writer.println("<link rel=\"stylesheet\" href=\"assets\\style2.css\">");
+//        writer.println("</head>");
+//        writer.println("<body>");
+//        writer.println("<div class=\"parent\">");
+//        writer.println("<div class=\"div1\" id=\"baseDiv\">\n" +
+//                "</div>\n" +
+//                "<div class=\"div2\"  id=\"idenfication\">\n" +
+//                "Identification\n" +
+//                "</div>\n" +
+//                "<div class=\"div3\"  id=\"identityCard\">\n" +
+//                "carte d'identité\n" +
+//                "</div>\n" +
+//                "<div class=\"div4\"  id=\"checkboxDiv\">\n" +
+//                "<div class=\"div5\">\n");
+//        writer.println("<a href='http://82.66.91.88:41015/AnnidFoley.html'>Website</a>");
+//        writer.println("</div>\n" +
+//                "</div>\n" +
+//                "</div>");
+//        writer.println("</body>");
+//        writer.println("</html>");
+//        writer.close();
     }
 
     void genererLesPagesAgents(String nomFichier, String chemin, Agent agent){
