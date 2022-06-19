@@ -27,21 +27,23 @@ public class Facade {
         genererLHtaccess();
 
         List<MyThread> listThreads = new ArrayList<>();
-        for (Agent agent : listAgents){
-            MyThread thread = new MyThread(agent, listAgents, listMateriels);
-            listThreads.add(thread);
-        }
+        creationFichier(listAgents.get(0).getNom() + listAgents.get(0).getPrenom() + ".html", "var/www/groupe5CDA.com/public_html/", listAgents.get(0));
 
-        for (MyThread thread : listThreads){
-            thread.start();
-        }
-        try {
-            for (MyThread thread : listThreads){
-                thread.join();
-            }
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+//        for (Agent agent : listAgents){
+//            MyThread thread = new MyThread(agent, listAgents, listMateriels);
+//            listThreads.add(thread);
+//        }
+//
+//        for (MyThread thread : listThreads){
+//            thread.start();
+//        }
+//        try {
+//            for (MyThread thread : listThreads){
+//                thread.join();
+//            }
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
 
     }
 
