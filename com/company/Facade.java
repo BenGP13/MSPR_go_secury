@@ -158,8 +158,17 @@ public class Facade {
 
     void genererLaPageDAccueil(){
         try{
-            PrintWriter writer = new PrintWriter("var/www/groupe5CDA.com/public_html/", "UTF-8");
-            System.out.println("Creation page d'accueil " + System.getProperty("user.dir"));
+            // Recevoir le fichier
+            File f = new File("var/www/groupe5CDA.com/public_html/" + "index.html");
+
+            // Créer un nouveau fichier
+            // Vérifier s'il n'existe pas
+            if (f.createNewFile())
+                System.out.println("File created");
+            else
+                System.out.println("File already exists");
+
+            PrintWriter writer = new PrintWriter("var/www/groupe5CDA.com/public_html/index.html", "UTF-8");
             writer.println("<!DOCTYPE html>");
             writer.println("<html lang=\"fr\">");
             writer.println("<head>");
