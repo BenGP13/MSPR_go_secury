@@ -136,6 +136,7 @@ public class Facade {
         try {
             // Recevoir le fichier
             File f = new File(chemin + nomFichier);
+            System.out.println(chemin + nomFichier);
 
             // Créer un nouveau fichier
             // Vérifier s'il n'existe pas
