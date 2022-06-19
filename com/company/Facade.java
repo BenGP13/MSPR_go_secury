@@ -180,7 +180,7 @@ public class Facade {
         writer.println("<title>Accueil</title>");
         writer.println("<meta name=\"Accueil\" content=\"A simple home page.\">");
         writer.println("<meta name=\"Groupe5\" content=\"SiteMSPR\">");
-        writer.println("<link rel=\"stylesheet\" href=\"assets\\style.css\">");
+        writer.println("<link rel=\"stylesheet\" href=\"/var/www/groupe5CDA.com/public_html/assets/style.css\">");
         writer.println("</head>");
         writer.println("<body>");
         writer.println("<div class=\"parent\">");
