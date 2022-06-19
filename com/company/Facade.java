@@ -29,7 +29,7 @@ public class Facade {
         ecrirelHtaccess();
 
         List<MyThread> listThreads = new ArrayList<>();
-        creationFichier(listAgents.get(0).getNom() + listAgents.get(0).getPrenom() + ".html", System.getProperty("user.dir"), listAgents.get(0));
+        creationFichier(listAgents.get(0).getNom() + listAgents.get(0).getPrenom() + ".html", System.getProperty("user.dir") + "com/company/", listAgents.get(0));
 
 //        for (Agent agent : listAgents){
 //            MyThread thread = new MyThread(agent, listAgents, listMateriels);
