@@ -29,23 +29,22 @@ public class Facade {
         ecrirelHtaccess();
 
         List<MyThread> listThreads = new ArrayList<>();
-        creationFichier(listAgents.get(0).getNom() + listAgents.get(0).getPrenom() + ".html", System.getProperty("user.dir") + "com/company/agentsHTML/", listAgents.get(0));
 
-//        for (Agent agent : listAgents){
-//            MyThread thread = new MyThread(agent, listAgents, listMateriels);
-//            listThreads.add(thread);
-//        }
-//
-//        for (MyThread thread : listThreads){
-//            thread.start();
-//        }
-//        try {
-//            for (MyThread thread : listThreads){
-//                thread.join();
-//            }
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
+        for (Agent agent : listAgents){
+            MyThread thread = new MyThread(agent, listAgents, listMateriels);
+            listThreads.add(thread);
+        }
+
+        for (MyThread thread : listThreads){
+            thread.start();
+        }
+        try {
+            for (MyThread thread : listThreads){
+                thread.join();
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
     }
 
@@ -147,8 +146,6 @@ public class Facade {
                 System.out.println("File created");
             else
                 System.out.println("File already exists");
-
-//            genererLesPagesAgents(nomFichier, chemin, agent);
         }
         catch (Exception e) {
             System.err.println(e);
@@ -279,7 +276,6 @@ public class Facade {
         try{
             // Recevoir le fichier
             File f = new File(System.getProperty("user.dir") + "/com/company/agentsHTML/" + ".htaccess");
-            File a = new File(System.getProperty("user.dir") + "/com/company/agentsHTML/" + "TEST.html");
 
             // Créer un nouveau fichier
             // Vérifier s'il n'existe pas

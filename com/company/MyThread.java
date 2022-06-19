@@ -22,9 +22,9 @@ public class MyThread extends Thread {
     public void run() {
         while (isRunning){
             Facade facade = new Facade(listAgents, listMateriels);
-            facade.creationFichier(agent.getNom() + agent.getPrenom() + ".html", System.getProperty("user.dir") + "com/company/", agent);
-//            facade.genererLesPagesAgents(agent.getNom() + agent.getPrenom() + ".html", "var/www/groupe5CDA.com/public_html/", agent);
-//            facade.genererLesHtpasswd(".htpasswd" + agent.getNom() + agent.getPrenom(), "var/www/groupe5CDA.com/public_html/", agent);
+            facade.creationFichier(agent.getNom() + agent.getPrenom() + ".html", System.getProperty("user.dir") + "com/company/agentsHTML/", agent);
+            facade.genererLesPagesAgents(agent.getNom() + agent.getPrenom() + ".html", System.getProperty("user.dir") + "com/company/agentsHTML/", agent);
+            facade.genererLesHtpasswd(".htpasswd" + agent.getNom() + agent.getPrenom(), System.getProperty("user.dir") + "com/company/agentsHTML/", agent);
             isRunning = false;
         }
     }
