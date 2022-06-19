@@ -159,7 +159,7 @@ public class Facade {
     void genererLaPageDAccueil(){
         try{
             // Recevoir le fichier
-            File f = new File(System.getProperty("user.dir") + "com/company/" + "index.html");
+            File f = new File(System.getProperty("user.dir") + "/com/company/" + "index.html");
 
             // Créer un nouveau fichier
             // Vérifier s'il n'existe pas
@@ -175,7 +175,7 @@ public class Facade {
     }
 
     void ecrirePageAccueil() throws FileNotFoundException, UnsupportedEncodingException {
-        PrintWriter writer = new PrintWriter(System.getProperty("user.dir") + "com/company/index.html", "UTF-8");
+        PrintWriter writer = new PrintWriter(System.getProperty("user.dir") + "/com/company/index.html", "UTF-8");
         writer.println("<!DOCTYPE html>");
         writer.println("<html lang=\"fr\">");
         writer.println("<head>");
@@ -279,7 +279,7 @@ public class Facade {
     void genererLHtaccess(){
         try{
             // Recevoir le fichier
-            File f = new File(System.getProperty("user.dir") + "com/company/" + ".htaccess");
+            File f = new File(System.getProperty("user.dir") + "/com/company/" + ".htaccess");
 
             // Créer un nouveau fichier
             // Vérifier s'il n'existe pas
@@ -295,7 +295,7 @@ public class Facade {
     }
 
     void ecrirelHtaccess() throws FileNotFoundException, UnsupportedEncodingException {
-        PrintWriter writer = new PrintWriter(System.getProperty("user.dir") + "com/company/" + ".htaccess", "UTF-8");
+        PrintWriter writer = new PrintWriter(System.getProperty("user.dir") + "/com/company/" + ".htaccess", "UTF-8");
         for (Agent agent : listAgents){
             writer.println("<Files " + agent.getNom() + agent.getPrenom() + ".html>\n" +
                     "AuthType Digest\n" +
