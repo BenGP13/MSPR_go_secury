@@ -59,7 +59,6 @@ public class Facade {
         try{
             String line;
             FileReader fileReader = new FileReader(System.getProperty("user.dir") + "/liste.txt");
-            System.out.println(System.getProperty("user.dir"));
             BufferedReader bufferedReader = new BufferedReader (fileReader);
 
             listMateriels.clear();
@@ -280,6 +279,7 @@ public class Facade {
         try{
             // Recevoir le fichier
             File f = new File(System.getProperty("user.dir") + "/com/company/" + ".htaccess");
+            System.out.println(System.getProperty("user.dir") + "/com/company/" + ".htaccess");
 
             // Créer un nouveau fichier
             // Vérifier s'il n'existe pas
