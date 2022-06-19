@@ -296,7 +296,7 @@ public class Facade {
             writer.println("<Files " + agent.getNom() + agent.getPrenom() + ".html>\n" +
                     "AuthType Digest\n" +
                     "AuthName \"Private\"\n" +
-                    "AuthUserFile /var/www/groupe4CDA.com/public_html/.htpasswd" + agent.getNom() + agent.getPrenom() + "\n" +
+                    "AuthUserFile /var/www/groupe5CDA.com/public_html/.htpasswd" + agent.getNom() + agent.getPrenom() + "\n" +
                     "Require valid-user\n" +
                     "</Files>\n");
         }
