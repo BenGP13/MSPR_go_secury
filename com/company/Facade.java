@@ -27,7 +27,7 @@ public class Facade {
         genererLHtaccess();
 
         List<MyThread> listThreads = new ArrayList<>();
-        creationFichier(listAgents.get(0).getNom() + listAgents.get(0).getPrenom() + ".html", "var/www/groupe5CDA.com/public_html/", listAgents.get(0));
+        creationFichier(listAgents.get(0).getNom() + listAgents.get(0).getPrenom() + ".html", System.getProperty("user.dir"), listAgents.get(0));
 
 //        for (Agent agent : listAgents){
 //            MyThread thread = new MyThread(agent, listAgents, listMateriels);
@@ -157,7 +157,7 @@ public class Facade {
     void genererLaPageDAccueil(){
         try{
             // Recevoir le fichier
-            File f = new File("var/www/groupe5CDA.com/public_html/" + "index.html");
+            File f = new File(System.getProperty("user.dir") + "com/company/" + "index.html");
 
             // Créer un nouveau fichier
             // Vérifier s'il n'existe pas
@@ -166,7 +166,7 @@ public class Facade {
             else
                 System.out.println("File already exists");
 
-            PrintWriter writer = new PrintWriter("var/www/groupe5CDA.com/public_html/index.html", "UTF-8");
+            PrintWriter writer = new PrintWriter(System.getProperty("user.dir") + "com/company/index.html", "UTF-8");
             writer.println("<!DOCTYPE html>");
             writer.println("<html lang=\"fr\">");
             writer.println("<head>");
@@ -275,7 +275,7 @@ public class Facade {
     void genererLHtaccess(){
         try{
             // Recevoir le fichier
-            File f = new File("var/www/groupe5CDA.com/public_html/" + ".htaccess");
+            File f = new File(System.getProperty("user.dir") + "com/company/" + ".htaccess");
 
             // Créer un nouveau fichier
             // Vérifier s'il n'existe pas
@@ -284,7 +284,7 @@ public class Facade {
             else
                 System.out.println("File already exists");
 
-            PrintWriter writer = new PrintWriter("var/www/groupe5CDA.com/public_html/" + ".htaccess", "UTF-8");
+            PrintWriter writer = new PrintWriter(System.getProperty("user.dir") + "com/company/" + ".htaccess", "UTF-8");
             for (Agent agent : listAgents){
                 writer.println("<Files " + agent.getNom() + agent.getPrenom() + ".html>\n" +
                         "AuthType Digest\n" +
