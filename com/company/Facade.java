@@ -156,7 +156,7 @@ public class Facade {
 
     void genererLaPageDAccueil(){
         try{
-            PrintWriter writer = new PrintWriter("var/www/groupe5CDA.com/public_html/" + "com\\company\\agentsHTML\\index.html", "UTF-8");
+            PrintWriter writer = new PrintWriter("var/www/groupe5CDA.com/public_html/", "UTF-8");
             System.out.println("Creation page d'accueil " + System.getProperty("user.dir"));
             writer.println("<!DOCTYPE html>");
             writer.println("<html lang=\"fr\">");
