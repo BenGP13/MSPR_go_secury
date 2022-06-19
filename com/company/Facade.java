@@ -201,7 +201,8 @@ public class Facade {
                 "<tr>\n"+
                 "<td>Inserez le nom des agent</td>\n");
         for (Agent agent: listAgents){
-            writer.println("<a href='http://82.66.91.88:41015/" + agent.getNom() + agent.getPrenom()+ ".html'>Website</a>");
+            writer.println("<td><a href='http://82.66.91.88:41015/" + agent.getNom() + agent.getPrenom() + ".html'>"
+                    + agent.getNom() + agent.getPrenom() + "</a>/td>");
         }
         writer.println("</tr>\n"+
                 "</tbody>\n"+
