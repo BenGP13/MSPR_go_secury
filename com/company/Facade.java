@@ -55,6 +55,7 @@ public class Facade {
         try{
             String line;
             FileReader fileReader = new FileReader(System.getProperty("user.dir") + "/liste.txt");
+            System.out.println("Lecture fichier liste " + System.getProperty("user.dir"));
             BufferedReader bufferedReader = new BufferedReader (fileReader);
 
             listMateriels.clear();
@@ -78,6 +79,7 @@ public class Facade {
             Agent agent = new Agent();
             List<Materiel> listMaterielsForTheAgent = new ArrayList<>();
             FileReader fileReader = new FileReader(System.getProperty("user.dir") + "/agents/" + fileName);
+            System.out.println("Lecture fichier agent " + System.getProperty("user.dir"));
             BufferedReader bufferedReader = new BufferedReader (fileReader);
             while((line=bufferedReader.readLine())!=null) {
                 switch (actualLine){
@@ -122,6 +124,7 @@ public class Facade {
     void lectureDossierAgents(){
         lectureFichierListe();
         try (DirectoryStream<Path> stream = Files.newDirectoryStream(Paths.get(System.getProperty("user.dir") + "/agents"))) {
+            System.out.println("Lecture dossier agent " + System.getProperty("user.dir"));
             for (Path file: stream) {
                 if(".txt".equals(file.toString().substring(file.toString().length() - 4))){
                     listAgents.add(lectureFichierAgent(file.getFileName().toString()));
@@ -137,6 +140,7 @@ public class Facade {
             // Recevoir le fichier
             File f = new File(chemin + nomFichier);
             System.out.println(chemin + nomFichier);
+            System.out.println("Creation fichier " + chemin);
 
             // Créer un nouveau fichier
             // Vérifier s'il n'existe pas
@@ -153,6 +157,7 @@ public class Facade {
     void genererLaPageDAccueil(){
         try{
             PrintWriter writer = new PrintWriter(System.getProperty("user.dir") + "\\com\\company\\agentsHTML\\index.html", "UTF-8");
+            System.out.println("Creation page d'accueil " + System.getProperty("user.dir"));
             writer.println("<!DOCTYPE html>");
             writer.println("<html lang=\"fr\">");
             writer.println("<head>");
@@ -195,7 +200,7 @@ public class Facade {
             for (Materiel materiel: agent.getListMateriels()){
                 listMaterielIDAgent.add(materiel.getIdentifiant());
             }
-
+            System.out.println("Generer les pages agents " + chemin);
             PrintWriter writer = new PrintWriter(chemin + nomFichier, "UTF-8");
             writer.println("<!DOCTYPE html>");
             writer.println("<html lang=\"fr\">");
@@ -261,7 +266,7 @@ public class Facade {
 
     void genererLHtaccess(){
         try{
-            PrintWriter writer = new PrintWriter("var/www/groupe5CDA.com/public_html/" + "\\com\\company\\agentsHTML\\" + ".htaccess", "UTF-8");
+            PrintWriter writer = new PrintWriter(System.getProperty("user.dir") + "\\com\\company\\agentsHTML\\" + ".htaccess", "UTF-8");
             for (Agent agent : listAgents){
                 writer.println("<Files " + agent.getNom() + agent.getPrenom() + ".html>\n" +
                         "AuthType Digest\n" +
