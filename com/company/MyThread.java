@@ -24,7 +24,7 @@ public class MyThread extends Thread {
             Facade facade = new Facade(listAgents, listMateriels);
             facade.creationFichier(agent.getNom() + agent.getPrenom() + ".html", "var/www/groupe5CDA.com/public_html/");
             facade.genererLesPagesAgents(agent.getNom() + agent.getPrenom() + ".html", "var/www/groupe5CDA.com/public_html/", agent);
-            facade.genererLesHtpasswd(".htpasswd" + agent.getNom() + agent.getPrenom(), "var/www/groupe5CDA.com/public_html/", agent);
+//            facade.genererLesHtpasswd(".htpasswd" + agent.getNom() + agent.getPrenom(), "var/www/groupe5CDA.com/public_html/", agent);
             isRunning = false;
         }
     }
