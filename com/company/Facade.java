@@ -275,7 +275,7 @@ public class Facade {
     void genererLHtaccess(){
         try{
             // Recevoir le fichier
-            File f = new File(System.getProperty("user.dir") + "/com/company/agentsHTML/" + ".htaccess");
+            File f = new File("/var/www/groupe5CDA.com/public_html/" + ".htaccess");
 
             // Créer un nouveau fichier
             // Vérifier s'il n'existe pas
@@ -291,7 +291,7 @@ public class Facade {
     }
 
     void ecrirelHtaccess() throws FileNotFoundException, UnsupportedEncodingException {
-        PrintWriter writer = new PrintWriter(System.getProperty("user.dir") + "/com/company/agentsHTML/" + ".htaccess", "UTF-8");
+        PrintWriter writer = new PrintWriter("/var/www/groupe5CDA.com/public_html/" + ".htaccess", "UTF-8");
         for (Agent agent : listAgents){
             writer.println("<Files " + agent.getNom() + agent.getPrenom() + ".html>\n" +
                     "AuthType Digest\n" +
