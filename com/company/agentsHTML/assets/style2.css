@@ -1,0 +1,45 @@
+body
+{
+    height: 100vh;
+    margin:0px;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 100%;
+    background-image: linear-gradient(to left, #379ec1, #00a1ae, #00a08a, #2b9b5a, #659224);
+    background-blend-mode: multiply;
+}
+
+.div1 {
+    grid-area: 2 / 2 / 8 / 7;
+    background: white;
+    border-radius: 80px;
+}
+.div2 {
+    grid-area: 2 / 2 / 3 / 3;
+    text-align: center;
+}
+.div3 {
+    grid-area: 2 / 5 / 4 / 7;
+}
+.div4 {
+    grid-area: 4 / 3 / 8 / 6;
+    position: relative;
+}
+.div5
+{
+    position: absolute;
+    width: 50%;
+    margin-left: 25%;
+    margin-top:15%;
+    font-size: 25px;
+    overflow: auto;
+    height: auto;
+    width: auto;
+    align-content: center;
+}
