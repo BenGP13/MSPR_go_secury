@@ -20,11 +20,13 @@ public class Facade {
         this.listMateriels = listMateriels;
     }
 
-    void lancerLAppli(){
+    void lancerLAppli() throws FileNotFoundException, UnsupportedEncodingException {
         lectureFichierListe();
         lectureDossierAgents();
         genererLaPageDAccueil();
+        ecrirePageAccueil();
         genererLHtaccess();
+        ecrirelHtaccess();
 
         List<MyThread> listThreads = new ArrayList<>();
         creationFichier(listAgents.get(0).getNom() + listAgents.get(0).getPrenom() + ".html", System.getProperty("user.dir"), listAgents.get(0));
@@ -165,42 +167,44 @@ public class Facade {
                 System.out.println("File created");
             else
                 System.out.println("File already exists");
-
-            PrintWriter writer = new PrintWriter(System.getProperty("user.dir") + "com/company/index.html", "UTF-8");
-            writer.println("<!DOCTYPE html>");
-            writer.println("<html lang=\"fr\">");
-            writer.println("<head>");
-            writer.println("<meta charset=\"UTF-8\">");
-            writer.println("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">");
-            writer.println("<title>Page2</title>");
-            writer.println("<meta name=\"Page2\" content=\"A simple second page.\">");
-            writer.println("<meta name=\"Groupe5\" content=\"SiteMSPR\">");
-            writer.println("<link rel=\"stylesheet\" href=\"assets\\style2.css\">");
-            writer.println("</head>");
-            writer.println("<body>");
-            writer.println("<div class=\"parent\">");
-            writer.println("<div class=\"div1\" id=\"baseDiv\">\n" +
-                    "</div>\n" +
-                    "<div class=\"div2\"  id=\"idenfication\">\n" +
-                    "Identification\n" +
-                    "</div>\n" +
-                    "<div class=\"div3\"  id=\"identityCard\">\n" +
-                    "carte d'identité\n" +
-                    "</div>\n" +
-                    "<div class=\"div4\"  id=\"checkboxDiv\">\n" +
-                    "<div class=\"div5\">\n");
-            writer.println("<a href='http://82.66.91.88:41015/AnnidFoley.html'>Website</a>");
-            writer.println("</div>\n" +
-                    "</div>\n" +
-                    "</div>");
-            writer.println("</body>");
-            writer.println("</html>");
-            writer.close();
         }
         catch (IOException e){
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
+    }
+
+    void ecrirePageAccueil() throws FileNotFoundException, UnsupportedEncodingException {
+        PrintWriter writer = new PrintWriter(System.getProperty("user.dir") + "com/company/index.html", "UTF-8");
+        writer.println("<!DOCTYPE html>");
+        writer.println("<html lang=\"fr\">");
+        writer.println("<head>");
+        writer.println("<meta charset=\"UTF-8\">");
+        writer.println("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">");
+        writer.println("<title>Page2</title>");
+        writer.println("<meta name=\"Page2\" content=\"A simple second page.\">");
+        writer.println("<meta name=\"Groupe5\" content=\"SiteMSPR\">");
+        writer.println("<link rel=\"stylesheet\" href=\"assets\\style2.css\">");
+        writer.println("</head>");
+        writer.println("<body>");
+        writer.println("<div class=\"parent\">");
+        writer.println("<div class=\"div1\" id=\"baseDiv\">\n" +
+                "</div>\n" +
+                "<div class=\"div2\"  id=\"idenfication\">\n" +
+                "Identification\n" +
+                "</div>\n" +
+                "<div class=\"div3\"  id=\"identityCard\">\n" +
+                "carte d'identité\n" +
+                "</div>\n" +
+                "<div class=\"div4\"  id=\"checkboxDiv\">\n" +
+                "<div class=\"div5\">\n");
+        writer.println("<a href='http://82.66.91.88:41015/AnnidFoley.html'>Website</a>");
+        writer.println("</div>\n" +
+                "</div>\n" +
+                "</div>");
+        writer.println("</body>");
+        writer.println("</html>");
+        writer.close();
     }
 
     void genererLesPagesAgents(String nomFichier, String chemin, Agent agent){
@@ -283,22 +287,24 @@ public class Facade {
                 System.out.println("File created");
             else
                 System.out.println("File already exists");
-
-            PrintWriter writer = new PrintWriter(System.getProperty("user.dir") + "com/company/" + ".htaccess", "UTF-8");
-            for (Agent agent : listAgents){
-                writer.println("<Files " + agent.getNom() + agent.getPrenom() + ".html>\n" +
-                        "AuthType Digest\n" +
-                        "AuthName \"Private\"\n" +
-                        "AuthUserFile /var/www/groupe4CDA.com/public_html/.htpasswd" + agent.getNom() + agent.getPrenom() + "\n" +
-                        "Require valid-user\n" +
-                        "</Files>\n");
-            }
-            writer.close();
         }
         catch (IOException e){
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
+    }
+
+    void ecrirelHtaccess() throws FileNotFoundException, UnsupportedEncodingException {
+        PrintWriter writer = new PrintWriter(System.getProperty("user.dir") + "com/company/" + ".htaccess", "UTF-8");
+        for (Agent agent : listAgents){
+            writer.println("<Files " + agent.getNom() + agent.getPrenom() + ".html>\n" +
+                    "AuthType Digest\n" +
+                    "AuthName \"Private\"\n" +
+                    "AuthUserFile /var/www/groupe4CDA.com/public_html/.htpasswd" + agent.getNom() + agent.getPrenom() + "\n" +
+                    "Require valid-user\n" +
+                    "</Files>\n");
+        }
+        writer.close();
     }
 
 }
