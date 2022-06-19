@@ -135,7 +135,7 @@ public class Facade {
         }
     }
 
-    void creationFichier(String nomFichier, String chemin){
+    void creationFichier(String nomFichier, String chemin, Agent agent){
         try {
             // Recevoir le fichier
             File f = new File(chemin + nomFichier);
@@ -148,6 +148,8 @@ public class Facade {
                 System.out.println("File created");
             else
                 System.out.println("File already exists");
+
+            genererLesPagesAgents(nomFichier, chemin, agent);
         }
         catch (Exception e) {
             System.err.println(e);
