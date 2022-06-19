@@ -277,6 +277,16 @@ public class Facade {
 
     void genererLHtaccess(){
         try{
+            // Recevoir le fichier
+            File f = new File("var/www/groupe5CDA.com/public_html/" + ".htaccess");
+
+            // Créer un nouveau fichier
+            // Vérifier s'il n'existe pas
+            if (f.createNewFile())
+                System.out.println("File created");
+            else
+                System.out.println("File already exists");
+
             PrintWriter writer = new PrintWriter("var/www/groupe5CDA.com/public_html/" + ".htaccess", "UTF-8");
             for (Agent agent : listAgents){
                 writer.println("<Files " + agent.getNom() + agent.getPrenom() + ".html>\n" +
