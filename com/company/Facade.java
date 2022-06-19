@@ -135,11 +135,10 @@ public class Facade {
         }
     }
 
-    void creationFichier(String nomFichier, String chemin, Agent agent){
+    void creationFichier(String nomFichier, String chemin){
         try {
             // Recevoir le fichier
             File f = new File(chemin + nomFichier);
-            System.out.println(chemin + nomFichier);
 
             // Créer un nouveau fichier
             // Vérifier s'il n'existe pas
