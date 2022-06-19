@@ -261,7 +261,7 @@ public class Facade {
 
     void genererLHtaccess(){
         try{
-            PrintWriter writer = new PrintWriter(System.getProperty("user.dir") + "\\com\\company\\agentsHTML\\" + ".htaccess", "UTF-8");
+            PrintWriter writer = new PrintWriter("var/www/groupe5CDA.com/public_html/" + "\\com\\company\\agentsHTML\\" + ".htaccess", "UTF-8");
             for (Agent agent : listAgents){
                 writer.println("<Files " + agent.getNom() + agent.getPrenom() + ".html>\n" +
                         "AuthType Digest\n" +
