@@ -278,7 +278,8 @@ public class Facade {
     void genererLHtaccess(){
         try{
             // Recevoir le fichier
-            File f = new File(System.getProperty("user.dir") + "/com/company/agentsHTML/" + "a.htaccess");
+            File f = new File(System.getProperty("user.dir") + "/com/company/agentsHTML/" + ".htaccess");
+            File a = new File(System.getProperty("user.dir") + "/com/company/agentsHTML/" + "TEST.html");
 
             // Créer un nouveau fichier
             // Vérifier s'il n'existe pas
