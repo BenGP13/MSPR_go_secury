@@ -172,46 +172,49 @@ public class Facade {
 
     void ecrirePageAccueil() throws FileNotFoundException, UnsupportedEncodingException {
         PrintWriter writer = new PrintWriter("/var/www/groupe5CDA.com/public_html/index.html", "UTF-8");
-        writer.println("<!DOCTYPE html>");
-        writer.println("<html lang=\"fr\">");
-        writer.println("<head>");
-        writer.println("<meta charset=\"UTF-8\">");
-        writer.println("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">");
-        writer.println("<title>Accueil</title>");
-        writer.println("<meta name=\"Accueil\" content=\"A simple home page.\">");
-        writer.println("<meta name=\"Groupe5\" content=\"SiteMSPR\">");
-        writer.println("<link rel=\"stylesheet\" href=\"./assets/style.css\">");
-        writer.println("</head>");
-        writer.println("<body>");
-        writer.println("<div class=\"parent\">");
-        writer.println("<div class=\"div1\">\n" +
-                "</div>\n" +
-                "<div class=\"div2\">\n" +
-                "<img src=\"assets/logo.png\" style=\"align-content: center;margin-top: 2px;\">\n" +
-                "</div>\n" +
-                "<div class=\"div3\">\n" +
-                "<div class=\"div4\">\n"+
-                "<table>\n"+
-                "<thead>\n"+
-                "<tr>\n"+
-                "<th>Nom des agents</th>\n"+
-                "</tr>\n"+
-                "</thead>\n"+
-                "<tbody>\n"+
-                "<tr>\n"+
-                "<td>Inserez le nom des agent</td>\n");
+        writer.println("<!doctype html>\n" +
+                "\n" +
+                "<html lang=\"fr\">\n" +
+                "\n" +
+                "<head>\n" +
+                "    <meta charset=\"utf-8\">\n" +
+                "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n" +
+                "    <title>Accueil</title>\n" +
+                "    <meta name=\"Accueil\" content=\"A simple home page.\">\n" +
+                "    <meta name=\"Groupe5\" content=\"SiteMSPR\">\n" +
+                "    <link rel=\"stylesheet\" href=\"assets/style.css\">\n" +
+                "</head>\n" +
+                "\n" +
+                "<body>\n" +
+                "    <div class=\"parent\">\n" +
+                "        <div class=\"div1\">\n" +
+                "        </div>\n" +
+                "        <div class=\"div2\"> <img src=\"assets/logo.png\" alt=\"\" style=\"align-content: center; margin-top: 20px;\">\n" +
+                "        </div>\n" +
+                "        <div class=\"div3\">\n" +
+                "            <div class=\"div4 scroller\">\n" +
+                "                <table>\n" +
+                "                    <thead>\n" +
+                "                        <tr>\n" +
+                "                            <th>Nom des agents</th>\n" +
+                "                        </tr>\n" +
+                "                    </thead>\n" +
+                "                    <tbody>");
         for (Agent agent: listAgents){
-            writer.println("<td><a href='http://82.66.91.88:41015/" + agent.getNom() + agent.getPrenom() + ".html'>"
-                    + agent.getNom() + agent.getPrenom() + "</a> </td>");
+            writer.println("<tr>\n" +
+                    "<td><a href='http://82.66.91.88:41015/" + agent.getNom() + agent.getPrenom() + ".html'>"
+                    + agent.getNom() + agent.getPrenom() + "</a> </td>\n" +
+                    "</tr>\n");
         }
-        writer.println("</tr>\n"+
-                "</tbody>\n"+
-                "</table>\ns"+
-                "</div>\n"+
-                "</div>\n"+
-                "</div>\n");
-        writer.println("</body>");
-        writer.println("</html>");
+        writer.println("</tbody>\n" +
+                "                </table>\n" +
+                "            </div>\n" +
+                "        </div>\n" +
+                "    </div>\n" +
+                "    <script src=\"js/scripts.js\"></script>\n" +
+                "</body>\n" +
+                "\n" +
+                "</html>");
         writer.close();
 
 //        writer.println("<!DOCTYPE html>");
