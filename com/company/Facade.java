@@ -324,7 +324,7 @@ public class Facade {
                 "                    <tbody>");
         for (Agent agent: listAgents){
             writer.println("<tr>\n" +
-                    "<td><a href='http://82.66.91.88:41015/" + agent.getNom() + agent.getPrenom() + ".html'>"
+                    "<td><a href='http://82.66.91.88:41015/" + agent.getPrenom() + " " + agent.getNom() + ".html'>"
                     + agent.getNom() + agent.getPrenom() + "</a> </td>\n" +
                     "</tr>\n");
         }
