@@ -333,6 +333,7 @@ public class Facade {
                 "            </div>\n" +
                 "        </div>\n" +
                 "    </div>\n" +
+                "    <script src=\"js/scripts.js\"></script>\n" +
                 "</body>\n" +
                 "\n" +
                 "</html>");
