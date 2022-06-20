@@ -184,6 +184,7 @@ public class Facade {
             System.out.println("Directory already exists");
         }
         creationFichier("style.css", "/var/www/groupe5CDA.com/public_html/assets/");
+        creationFichier("style2.css", "/var/www/groupe5CDA.com/public_html/assets/");
     }
 
     void ecrireLeCss() throws FileNotFoundException, UnsupportedEncodingException {
@@ -241,6 +242,54 @@ public class Facade {
                 "    scrollbar-width: thin;\n" +
                 "  }");
         writer.close();
+
+        PrintWriter writer2 = new PrintWriter("/var/www/groupe5CDA.com/public_html/assets/style.css", "UTF-8");
+        writer2.println("body\n" +
+                "{\n" +
+                "    height: 100vh;\n" +
+                "    margin:0px;\n" +
+                "}\n" +
+                "\n" +
+                ".parent {\n" +
+                "    display: grid;\n" +
+                "    grid-template-columns: repeat(7, 1fr);\n" +
+                "    grid-template-rows: repeat(8, 1fr);\n" +
+                "    grid-column-gap: 0px;\n" +
+                "    grid-row-gap: 0px;\n" +
+                "    height: 100%;\n" +
+                "    background-image: linear-gradient(to left, #379ec1, #00a1ae, #00a08a, #2b9b5a, #659224);\n" +
+                "    background-blend-mode: multiply;\n" +
+                "}\n" +
+                "\n" +
+                ".div1 {\n" +
+                "    grid-area: 2 / 2 / 8 / 7;\n" +
+                "    background: white;\n" +
+                "    border-radius: 80px;\n" +
+                "}\n" +
+                ".div2 {\n" +
+                "    grid-area: 2 / 2 / 3 / 3;\n" +
+                "    text-align: center;\n" +
+                "}\n" +
+                ".div3 {\n" +
+                "    grid-area: 2 / 5 / 4 / 7;\n" +
+                "}\n" +
+                ".div4 {\n" +
+                "    grid-area: 4 / 3 / 8 / 6;\n" +
+                "    position: relative;\n" +
+                "}\n" +
+                ".div5\n" +
+                "{\n" +
+                "    position: absolute;\n" +
+                "    width: 50%;\n" +
+                "    margin-left: 25%;\n" +
+                "    margin-top:15%;\n" +
+                "    font-size: 25px;\n" +
+                "    overflow: auto;\n" +
+                "    height: auto;\n" +
+                "    width: auto;\n" +
+                "    align-content: center;\n" +
+                "}");
+        writer2.close();
     }
 
     void ecrirePageAccueil() throws FileNotFoundException, UnsupportedEncodingException {
