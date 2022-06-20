@@ -183,7 +183,7 @@ public class Facade {
         } else {
             System.out.println("Directory already exists");
         }
-        creationFichier("style.css", "/var/www/groupe5CDA.com/public_html/assets");
+        creationFichier("style.css", "/var/www/groupe5CDA.com/public_html/assets/");
     }
 
     void ecrireLeCss() throws FileNotFoundException, UnsupportedEncodingException {
