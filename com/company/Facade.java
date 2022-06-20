@@ -212,6 +212,8 @@ public class Facade {
                 "}\n" +
                 ".div2 {\n" +
                 "    grid-area: 2 / 4 / 3 / 5;\n" +
+                "    display: flex;\n" +
+                "    justify-content: center;\n" +
                 "}\n" +
                 ".div3 {\n" +
                 "    grid-area: 4 / 3 / 8 / 6;\n" +
