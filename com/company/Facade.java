@@ -274,7 +274,7 @@ public class Facade {
                 "    grid-area: 2 / 5 / 4 / 7;\n" +
                 "}\n" +
                 ".div4 {\n" +
-                "    grid-area: 4 / 3 / 8 / 6;\n" +
+                "    grid-area: 3 / 3 / 8 / 6;\n" +
                 "    position: relative;\n" +
                 "}\n" +
                 ".div5\n" +
@@ -366,9 +366,9 @@ public class Facade {
                     "        <div class=\"div2\" id=\"idenfication\">\n" +
                     "            Identification\n" +
                     "        </div>\n" +
-                    "        <div class=\"div3\" id=\"identityCard\">\n" +
-                    "            carte d'identité\n" +
-                    "        </div>\n" +
+                    "        <div class=\"div3\" id=\"identityCard\">\n");
+                    writer.println("<img src=\"assets/" + (agent.getPrenom().substring(0, 1) + agent.getNom()).toLowerCase() + ".jpg alt=\"\" style=\"align-content: center;\">");
+                    writer.println("        </div>\n" +
                     "        <div class=\"div4\" id=\"checkboxDiv\">\n" +
                     "            <div class=\"div5\">");
             for (Materiel materiel : listMateriels){
