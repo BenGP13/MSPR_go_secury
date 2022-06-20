@@ -397,7 +397,8 @@ public class Facade {
     void genererLesHtpasswd(String nomFichier, String chemin, Agent agent){
         try{
             PrintWriter writer = new PrintWriter(chemin + nomFichier, "UTF-8");
-            byte b[] = java.security.MessageDigest.getInstance("MD5").digest( (agent.getNom() + agent.getPrenom() + ":" + "Private" + ":" + agent.getMotDePasse() ).getBytes());
+            byte b[] = java.security.MessageDigest.getInstance("MD5").digest( ((agent.getPrenom().substring(0, 1) + agent.getNom()).toLowerCase()
+                    + ":" + "Private" + ":" + agent.getMotDePasse() ).getBytes());
             java.math.BigInteger bi = new java.math.BigInteger(1, b);
             String s = bi.toString(16);
             while(s.length() < 32)
