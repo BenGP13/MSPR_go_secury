@@ -20,10 +20,11 @@ public class Facade {
         this.listMateriels = listMateriels;
     }
 
-    void lancerLAppli() throws FileNotFoundException, UnsupportedEncodingException {
+    void lancerLAppli() throws IOException {
         lectureFichierListe();
         lectureDossierAgents();
         genererLaPageDAccueil();
+        genererLeCSS();
         ecrirePageAccueil();
         genererLHtaccess();
         ecrirelHtaccess();
@@ -170,6 +171,75 @@ public class Facade {
         }
     }
 
+    void genererLeCSS() throws IOException {
+        String fileName = "/var/www/groupe5CDA.com/public_html/assets";
+
+        Path path = Paths.get(fileName);
+
+        if (!Files.exists(path)) {
+            Files.createDirectory(path);
+            System.out.println("New Directory created !");
+        } else {
+            System.out.println("Directory already exists");
+        }
+        creationFichier("style.css", "/var/www/groupe5CDA.com/public_html/");
+    }
+
+    void ecrireLeCss() throws FileNotFoundException, UnsupportedEncodingException {
+        PrintWriter writer = new PrintWriter("/var/www/groupe5CDA.com/public_html/index.html/assets/style.css", "UTF-8");
+        writer.println("body\n" +
+                "{\n" +
+                "    height: 100vh;\n" +
+                "    margin:0px;\n" +
+                "}\n" +
+                "\n" +
+                ".parent {\n" +
+                "    display: grid;\n" +
+                "    grid-template-columns: repeat(7, 1fr);\n" +
+                "    grid-template-rows: repeat(9, 1fr);\n" +
+                "    grid-column-gap: 0px;\n" +
+                "    grid-row-gap: 0px;\n" +
+                "    height: 100%;\n" +
+                "    background-image: linear-gradient(to left, #379ec1, #00a1ae, #00a08a, #2b9b5a, #659224);\n" +
+                "    background-blend-mode: multiply;\n" +
+                "}\n" +
+                "\n" +
+                ".div1 {\n" +
+                "    grid-area: 2 / 2 / 9 / 7;\n" +
+                "    background: white;\n" +
+                "    border-radius: 80px;\n" +
+                "}\n" +
+                ".div2 {\n" +
+                "    grid-area: 2 / 4 / 3 / 5;\n" +
+                "}\n" +
+                ".div3 {\n" +
+                "    grid-area: 4 / 3 / 8 / 6;\n" +
+                "    position: relative;\n" +
+                "}\n" +
+                ".div4\n" +
+                "{\n" +
+                "    position: absolute;\n" +
+                "    width: 50%;\n" +
+                "    margin-left: 25%;\n" +
+                "\n" +
+                "}\n" +
+                "th,table\n" +
+                "{\n" +
+                "    padding: 10px;\n" +
+                "    border-collapse: collapse;\n" +
+                "    border: 1px solid black;\n" +
+                "    width: 100%;\n" +
+                "    text-align: center;\n" +
+                "}\n" +
+                "\n" +
+                ".scroller {\n" +
+                "    height: 100%;\n" +
+                "    overflow-y: auto;\n" +
+                "    scrollbar-width: thin;\n" +
+                "  }");
+        writer.close();
+    }
+
     void ecrirePageAccueil() throws FileNotFoundException, UnsupportedEncodingException {
         PrintWriter writer = new PrintWriter("/var/www/groupe5CDA.com/public_html/index.html", "UTF-8");
         writer.println("<!doctype html>\n" +
@@ -216,36 +286,6 @@ public class Facade {
                 "\n" +
                 "</html>");
         writer.close();
-
-//        writer.println("<!DOCTYPE html>");
-//        writer.println("<html lang=\"fr\">");
-//        writer.println("<head>");
-//        writer.println("<meta charset=\"UTF-8\">");
-//        writer.println("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">");
-//        writer.println("<title>Page2</title>");
-//        writer.println("<meta name=\"Page2\" content=\"A simple second page.\">");
-//        writer.println("<meta name=\"Groupe5\" content=\"SiteMSPR\">");
-//        writer.println("<link rel=\"stylesheet\" href=\"assets\\style2.css\">");
-//        writer.println("</head>");
-//        writer.println("<body>");
-//        writer.println("<div class=\"parent\">");
-//        writer.println("<div class=\"div1\" id=\"baseDiv\">\n" +
-//                "</div>\n" +
-//                "<div class=\"div2\"  id=\"idenfication\">\n" +
-//                "Identification\n" +
-//                "</div>\n" +
-//                "<div class=\"div3\"  id=\"identityCard\">\n" +
-//                "carte d'identité\n" +
-//                "</div>\n" +
-//                "<div class=\"div4\"  id=\"checkboxDiv\">\n" +
-//                "<div class=\"div5\">\n");
-//        writer.println("<a href='http://82.66.91.88:41015/AnnidFoley.html'>Website</a>");
-//        writer.println("</div>\n" +
-//                "</div>\n" +
-//                "</div>");
-//        writer.println("</body>");
-//        writer.println("</html>");
-//        writer.close();
     }
 
     void genererLesPagesAgents(String nomFichier, String chemin, Agent agent){
