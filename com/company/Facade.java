@@ -187,7 +187,7 @@ public class Facade {
     }
 
     void ecrireLeCss() throws FileNotFoundException, UnsupportedEncodingException {
-        PrintWriter writer = new PrintWriter("/var/www/groupe5CDA.com/public_html/index.html/assets/style.css", "UTF-8");
+        PrintWriter writer = new PrintWriter("/var/www/groupe5CDA.com/public_html/assets/style.css", "UTF-8");
         writer.println("body\n" +
                 "{\n" +
                 "    height: 100vh;\n" +
