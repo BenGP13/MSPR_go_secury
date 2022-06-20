@@ -6,4 +6,3 @@ test2
 menottes
 lampe
 mousqueton
-gants
