@@ -367,7 +367,7 @@ public class Facade {
                     "            Identification\n" +
                     "        </div>\n" +
                     "        <div class=\"div3\" id=\"identityCard\">\n");
-                    writer.println("<img src=\"assets/" + (agent.getPrenom().substring(0, 1) + agent.getNom()).toLowerCase() + ".jpg alt=\"\" style=\"align-content: center;\">");
+                    writer.println("<img src=\"assets/" + (agent.getPrenom().substring(0, 1) + agent.getNom()).toLowerCase() + ".jpg\" alt=\"\" style=\"align-content: center;\">");
                     writer.println("        </div>\n" +
                     "        <div class=\"div4\" id=\"checkboxDiv\">\n" +
                     "            <div class=\"div5\">");
