@@ -297,28 +297,31 @@ public class Facade {
                 listMaterielIDAgent.add(materiel.getIdentifiant());
             }
             PrintWriter writer = new PrintWriter(chemin + nomFichier, "UTF-8");
-            writer.println("<!DOCTYPE html>");
-            writer.println("<html lang=\"fr\">");
-            writer.println("<head>");
-            writer.println("<meta charset=\"UTF-8\">");
-            writer.println("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">");
-            writer.println("<title>Page2</title>");
-            writer.println("<meta name=\"Page2\" content=\"A simple second page.\">");
-            writer.println("<meta name=\"Groupe5\" content=\"SiteMSPR\">");
-            writer.println("<link rel=\"stylesheet\" href=\"assets\\style2.css\">");
-            writer.println("</head>");
-            writer.println("<body>");
-            writer.println("<div class=\"parent\">");
-            writer.println("<div class=\"div1\" id=\"baseDiv\">\n" +
-                    "</div>\n" +
-                    "<div class=\"div2\"  id=\"idenfication\">\n" +
-                    "Identification\n" +
-                    "</div>\n" +
-                    "<div class=\"div3\"  id=\"identityCard\">\n" +
-                    "carte d'identité\n" +
-                    "</div>\n" +
-                    "<div class=\"div4\"  id=\"checkboxDiv\">\n" +
-                    "<div class=\"div5\">\n");
+            writer.println("!doctype html>\n" +
+                    "\n" +
+                    "<html lang=\"fr\">\n" +
+                    "\n" +
+                    "<head>\n" +
+                    "    <meta charset=\"utf-8\">\n" +
+                    "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n" +
+                    "    <title>Page2</title>\n" +
+                    "    <meta name=\"Page2\" content=\"A simple second page.\">\n" +
+                    "    <meta name=\"Groupe5\" content=\"SiteMSPR\">\n" +
+                    "    <link rel=\"stylesheet\" href=\"assets/style2.css\">\n" +
+                    "</head>\n" +
+                    "\n" +
+                    "<body>\n" +
+                    "    <div class=\"parent\">\n" +
+                    "        <div class=\"div1\" id=\"baseDiv\">\n" +
+                    "        </div>\n" +
+                    "        <div class=\"div2\" id=\"idenfication\">\n" +
+                    "            Identification\n" +
+                    "        </div>\n" +
+                    "        <div class=\"div3\" id=\"identityCard\">\n" +
+                    "            carte d'identité\n" +
+                    "        </div>\n" +
+                    "        <div class=\"div4\" id=\"checkboxDiv\">\n" +
+                    "            <div class=\"div5\">");
             for (Materiel materiel : listMateriels){
                 if(listMaterielIDAgent.contains(materiel.getIdentifiant())){
                     writer.println("<input type=\"checkbox\" id=\"" + materiel.getIdentifiant() + "\" name=\"" + materiel.getIdentifiant() + "\" disabled checked><label>" + materiel.getNom() + "</label>");
@@ -328,10 +331,11 @@ public class Facade {
                 writer.println("<br>");
             }
             writer.println("</div>\n" +
-                    "</div>\n" +
-                    "</div>");
-            writer.println("</body>");
-            writer.println("</html>");
+                    "        </div>\n" +
+                    "    </div>\n" +
+                    "</body>\n" +
+                    "\n" +
+                    "</html>");
             writer.close();
         }
         catch (IOException e){
