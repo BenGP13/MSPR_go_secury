@@ -297,7 +297,7 @@ public class Facade {
                 listMaterielIDAgent.add(materiel.getIdentifiant());
             }
             PrintWriter writer = new PrintWriter(chemin + nomFichier, "UTF-8");
-            writer.println("!doctype html>\n" +
+            writer.println("<!doctype html>\n" +
                     "\n" +
                     "<html lang=\"fr\">\n" +
                     "\n" +
