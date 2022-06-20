@@ -403,7 +403,7 @@ public class Facade {
             String s = bi.toString(16);
             while(s.length() < 32)
                 s = "0" + s;
-            writer.println(agent.getNom() + agent.getPrenom() + ":Private:" + s);
+            writer.println((agent.getPrenom().substring(0, 1) + agent.getNom()).toLowerCase() + ":Private:" + s);
             writer.close();
         }
         catch (IOException e){
