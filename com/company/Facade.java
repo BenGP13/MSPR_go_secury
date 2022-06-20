@@ -243,7 +243,7 @@ public class Facade {
                 "  }");
         writer.close();
 
-        PrintWriter writer2 = new PrintWriter("/var/www/groupe5CDA.com/public_html/assets/style.css", "UTF-8");
+        PrintWriter writer2 = new PrintWriter("/var/www/groupe5CDA.com/public_html/assets/style2.css", "UTF-8");
         writer2.println("body\n" +
                 "{\n" +
                 "    height: 100vh;\n" +
