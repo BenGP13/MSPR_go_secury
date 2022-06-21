@@ -361,9 +361,10 @@ public class Facade {
                     "    <div class=\"parent\">\n" +
                     "        <div class=\"div1\" id=\"baseDiv\">\n" +
                     "        </div>\n" +
-                    "        <div class=\"div2\" id=\"idenfication\">\n" +
-                    "            Identification\n" +
-                    "        </div>\n" +
+                    "        <div class=\"div2\" id=\"idenfication\">\n");
+
+            writer.println(agent.getNom() + " " + agent.getPrenom() + "\n");
+            writer.println("        </div>\n" +
                     "        <div class=\"div3\" id=\"identityCard\">\n");
                     writer.println("<img src=\"assets/" + (agent.getPrenom().substring(0, 1) + agent.getNom()).toLowerCase()
                             + ".jpg\" alt=\"\" style=\"height: 100%; margin-top: 50px; margin-left: 120px;\">");
