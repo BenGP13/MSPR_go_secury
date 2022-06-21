@@ -4,3 +4,5 @@ Surveillance entrepôt
 test2
 
 lampe
+gants
+mousqueton
