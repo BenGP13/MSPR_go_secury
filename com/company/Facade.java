@@ -267,27 +267,24 @@ public class Facade {
                 "    border-radius: 80px;\n" +
                 "}\n" +
                 ".div2 {\n" +
-                "    grid-area: 2 / 2 / 3 / 3;\n" +
-                "    text-align: center;\n" +
+                "        grid-area: 2 / 2 / 3 / 3;\n" +
+                "        display: flex;\n" +
+                "        justify-content: center;\n" +
+                "        align-items: center;\n" +
+                "        font-size: 18px;\n" +
                 "}\n" +
                 ".div3 {\n" +
                 "    grid-area: 2 / 5 / 4 / 7;\n" +
                 "}\n" +
                 ".div4 {\n" +
-                "    grid-area: 3 / 3 / 8 / 6;\n" +
-                "    position: relative;\n" +
+                "    grid-area: 4 / 3 / 8 / 6;\n" +
+                "    display: flex;\n" +
+                "    justify-content: center;\n" +
+                "    align-items: center;\n" +
                 "}\n" +
                 ".div5\n" +
                 "{\n" +
-                "    position: absolute;\n" +
-                "    width: 50%;\n" +
-                "    margin-left: 25%;\n" +
-                "    margin-top:15%;\n" +
                 "    font-size: 25px;\n" +
-                "    overflow: auto;\n" +
-                "    height: auto;\n" +
-                "    width: auto;\n" +
-                "    align-content: center;\n" +
                 "}");
         writer2.close();
     }
@@ -322,6 +319,7 @@ public class Facade {
                 "                        </tr>\n" +
                 "                    </thead>\n" +
                 "                    <tbody>");
+        listAgents.sort((Agent a, Agent b) -> a.getNom().compareTo(b.getNom()));
         for (Agent agent: listAgents){
             writer.println("<tr>\n" +
                     "<td><a href='http://82.66.91.88:41015/" + agent.getNom() + agent.getPrenom() + ".html'>"
@@ -364,11 +362,13 @@ public class Facade {
                     "    <div class=\"parent\">\n" +
                     "        <div class=\"div1\" id=\"baseDiv\">\n" +
                     "        </div>\n" +
-                    "        <div class=\"div2\" id=\"idenfication\">\n" +
-                    "            Identification\n" +
-                    "        </div>\n" +
+                    "        <div class=\"div2\" id=\"idenfication\">\n");
+
+            writer.println(agent.getNom() + " " + agent.getPrenom() + "\n");
+            writer.println("        </div>\n" +
                     "        <div class=\"div3\" id=\"identityCard\">\n");
-                    writer.println("<img src=\"assets/" + (agent.getPrenom().substring(0, 1) + agent.getNom()).toLowerCase() + ".jpg\" alt=\"\" style=\"align-content: center;\">");
+                    writer.println("<img src=\"assets/" + (agent.getPrenom().substring(0, 1) + agent.getNom()).toLowerCase()
+                            + ".jpg\" alt=\"\" style=\"height: 100%; margin-top: 50px; margin-left: 120px;\">");
                     writer.println("        </div>\n" +
                     "        <div class=\"div4\" id=\"checkboxDiv\">\n" +
                     "            <div class=\"div5\">");
