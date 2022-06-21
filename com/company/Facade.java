@@ -274,20 +274,14 @@ public class Facade {
                 "    grid-area: 2 / 5 / 4 / 7;\n" +
                 "}\n" +
                 ".div4 {\n" +
-                "    grid-area: 3 / 3 / 8 / 6;\n" +
-                "    position: relative;\n" +
+                "    grid-area: 4 / 3 / 8 / 6;\n" +
+                "    display: flex;\n" +
+                "    justify-content: center;\n" +
+                "    align-items: center;\n" +
                 "}\n" +
                 ".div5\n" +
                 "{\n" +
-                "    position: absolute;\n" +
-                "    width: 50%;\n" +
-                "    margin-left: 25%;\n" +
-                "    margin-top:15%;\n" +
                 "    font-size: 25px;\n" +
-                "    overflow: auto;\n" +
-                "    height: auto;\n" +
-                "    width: auto;\n" +
-                "    align-content: center;\n" +
                 "}");
         writer2.close();
     }
