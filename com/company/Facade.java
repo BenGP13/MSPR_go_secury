@@ -267,8 +267,10 @@ public class Facade {
                 "    border-radius: 80px;\n" +
                 "}\n" +
                 ".div2 {\n" +
-                "    grid-area: 2 / 2 / 3 / 3;\n" +
-                "    text-align: center;\n" +
+                "        display: flex;\n" +
+                "        justify-content: center;\n" +
+                "        align-items: center;\n" +
+                "        font-size: 25px;\n" +
                 "}\n" +
                 ".div3 {\n" +
                 "    grid-area: 2 / 5 / 4 / 7;\n" +
@@ -362,7 +364,8 @@ public class Facade {
                     "            Identification\n" +
                     "        </div>\n" +
                     "        <div class=\"div3\" id=\"identityCard\">\n");
-                    writer.println("<img src=\"assets/" + (agent.getPrenom().substring(0, 1) + agent.getNom()).toLowerCase() + ".jpg\" alt=\"\" style=\"align-content: center;\">");
+                    writer.println("<img src=\"assets/" + (agent.getPrenom().substring(0, 1) + agent.getNom()).toLowerCase()
+                            + ".jpg\" alt=\"\" style=\"height: 100%; margin-top: 50px; margin-left: 120px;\">");
                     writer.println("        </div>\n" +
                     "        <div class=\"div4\" id=\"checkboxDiv\">\n" +
                     "            <div class=\"div5\">");
