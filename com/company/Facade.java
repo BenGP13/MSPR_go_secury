@@ -271,7 +271,7 @@ public class Facade {
                 "        display: flex;\n" +
                 "        justify-content: center;\n" +
                 "        align-items: center;\n" +
-                "        font-size: 25px;\n" +
+                "        font-size: 18px;\n" +
                 "}\n" +
                 ".div3 {\n" +
                 "    grid-area: 2 / 5 / 4 / 7;\n" +
@@ -319,6 +319,7 @@ public class Facade {
                 "                        </tr>\n" +
                 "                    </thead>\n" +
                 "                    <tbody>");
+        listAgents.sort((Agent a, Agent b) -> a.getNom().compareTo(b.getNom()));
         for (Agent agent: listAgents){
             writer.println("<tr>\n" +
                     "<td><a href='http://82.66.91.88:41015/" + agent.getNom() + agent.getPrenom() + ".html'>"
