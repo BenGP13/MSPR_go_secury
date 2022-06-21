@@ -1,8 +1,9 @@
 Berthier
 Corinne
 Surveillance entrepôt 
-password
+test2
 
+menottes
 lampe
-gants
 mousqueton
+gants
