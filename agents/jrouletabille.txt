@@ -1,7 +1,7 @@
 Janny
 Rouletabille
 Surveillance entrepôt 
-Motdep@sse01
+password
 
 brassard
 talky
