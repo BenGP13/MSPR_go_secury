@@ -5,3 +5,5 @@ password
 
 lampe
 brassard
+gants
+mousqueton
