@@ -267,6 +267,7 @@ public class Facade {
                 "    border-radius: 80px;\n" +
                 "}\n" +
                 ".div2 {\n" +
+                "        grid-area: 2 / 2 / 3 / 3;\n" +
                 "        display: flex;\n" +
                 "        justify-content: center;\n" +
                 "        align-items: center;\n" +
