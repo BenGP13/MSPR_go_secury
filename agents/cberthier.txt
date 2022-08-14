@@ -3,6 +3,6 @@ Corinne
 Surveillance entrepôt 
 password
 
-lampe
-mousqueton
-talky
+menottes
+brassard
+gants
