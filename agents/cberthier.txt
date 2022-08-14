@@ -4,6 +4,5 @@ Surveillance entrepôt
 password
 
 lampe
-brassard
-gants
 mousqueton
+talky
